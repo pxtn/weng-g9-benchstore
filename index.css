@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+            "header"
+            "content";
+}
+
+.header {
+    overflow: hidden;
+    padding: 20px 10px;
+    background-color: #d9d9d9;
+    grid-area: header;
+}
+
+.logo {
+    background-color: #009fe3;
+}
+
+.navigation {
+}
+
+.user {
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+            "section-main section-right";
+}
+
+.section-main {
+    background-color: #e5e5e5;
+    grid-area: section-main;
+}
+
+.section-right {
+    background-color: #d9dad9;
+    grid-area: section-right;
+}
