@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="header.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
@@ -12,19 +14,26 @@
   <body>
     <div class="header">
       <div class="header__content">
-        <div class="logo-container">insert logo here</div>
+        <div class="logo-container">
+          <a href="/index.html">
+            <img class="logo" src="assets/img/BenchStore-Logo.svg" />
+          </a>
+        </div>
         <div class="navigation">
-          <a href="#" class="navigation__link navigation__link--active"
+          <a
+            href="/index.html"
+            class="navigation__link navigation__link--active"
             >Übersicht</a
           >
-          <a href="#" class="navigation__link">Meine Firma</a>
-          <a href="#" class="navigation__link">Kollektivbestellung</a>
+          <a href="/company.html" class="navigation__link">Meine Firma</a>
         </div>
         <div class="user">
-          <div class="profile-picture"></div>
+          <svg class="profile-picture">
+            <use xlink:href="assets/img/profile.svg#profile"></use>
+          </svg>
           <div>
-            <div class="user-name">Hallo user</div>
-            <a href="#">Abmelden</a>
+            <div class="user__name">Hans Muster</div>
+            <a class="logout" href="#">❯ Abmelden</a>
           </div>
         </div>
       </div>
