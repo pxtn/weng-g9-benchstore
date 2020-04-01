@@ -1,2 +1,2 @@
 # weng-g9-benchstore
-ZHAW Semester 3 - Web Engineering Projekt
+ZHAW Semester 4 - Web Engineering Projekt
