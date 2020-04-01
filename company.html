@@ -41,47 +41,51 @@
     </div>
     <div class="content">
      <div class="main">
-       <p class="company__heading">Daten für den April 2020</p>
-       <form class="company__form">
-         <ul>
-           <li>
-             <label for="mitarbeiter">Mitarbeiter:</label>
-             <input
-                     type="number"
-                     name="mitarbeiter"
-                     id="mitarbeiter"
-                     maxlength="6"
-             />
-           </li>
-           <li>
-             <label for="umsatz">Umsatz:</label>
-             <input type="number" name="umsatz" id="umsatz" maxlength="12" />
-           </li>
-           <li>
-             <label for="ausgaben">Ausgaben:</label>
-             <input
-                     type="number"
-                     name="ausgaben"
-                     id="ausgaben"
-                     maxlength="12"
-             />
-           </li>
-           <li>
-             <label for="ertrag">Ertrag:</label>
-             <input type="number" name="ertrag" id="ertrag" maxlength="12" />
-           </li>
-           <li class="company__buttons">
-             <button type="reset">Zurücksetzen</button>
-             <button type="submit">Speichern</button>
-           </li>
-         </ul>
-       </form>
+       <div class="tile">
+         <p class="company__heading">Daten für den April 2020</p>
+         <form class="company__form">
+           <ul>
+             <li>
+               <label for="mitarbeiter">Mitarbeiter:</label>
+               <input
+                       type="number"
+                       name="mitarbeiter"
+                       id="mitarbeiter"
+                       maxlength="6"
+               />
+             </li>
+             <li>
+               <label for="umsatz">Umsatz: <i class="faded">in CHF</i></label>
+               <input type="number" name="umsatz" id="umsatz" maxlength="12" />
+             </li>
+             <li>
+               <label for="ausgaben">Ausgaben: <i class="faded">in CHF</i></label>
+               <input
+                       type="number"
+                       name="ausgaben"
+                       id="ausgaben"
+                       maxlength="12"
+               />
+             </li>
+             <li>
+               <label for="ertrag">Ertrag: <i class="faded">in CHF</i></label>
+               <input type="number" name="ertrag" id="ertrag" maxlength="12" />
+             </li>
+             <li class="company__buttons">
+               <button type="reset">Zurücksetzen</button>
+               <button type="submit">Speichern</button>
+             </li>
+           </ul>
+         </form>
+       </div>
       </div>
       <div class="side-right">
-        <p class="company__heading">Vorherige Monate</p>
-        <p class="company__months">> März 2020</p>
-        <p class="company__months">> Februar 2020</p>
-        <p class="company__months">> Januar 2020</p>
+        <div class="tile">
+          <p class="company__heading">Vorherige Monate</p>
+          <p class="company__months">> März 2020</p>
+          <p class="company__months">> Februar 2020</p>
+          <p class="company__months">> Januar 2020</p>
+        </div>
       </div>
     </div>
   </body>
