@@ -1,20 +1,92 @@
 .content {
   display: flex;
+  align-items: flex-start;
   width: 100%;
+  height: calc(100% - 80px);
+  overflow-y: auto;
   max-width: 1200px;
-  flex-grow: 1;
   margin: 0 auto;
-  background: indianred;
+  padding: 7.5px;
+  box-sizing: border-box;
 }
 
 .main {
-  flex-grow: 3;
-  padding: 15px;
-  background: sandybrown;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .side-right {
-  flex-grow: 1;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.tile {
+  background: white;
+  width: calc(100% - 15px);
   padding: 15px;
-  background: skyblue;
+  margin: 7.5px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+@media (min-width: 850px) {
+  .tile--small {
+    width: calc(50% - 15px);
+  }
+}
+
+.tile--clickable {
+  cursor: pointer;
+}
+
+.tile--clickable:not(.tile--selected):hover {
+  border-color: #ccc;
+}
+
+.tile--selected {
+  border-color: #808080;
+}
+
+.tile__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.performance-chart {
+  position: relative;
+  height: 35px;
+  border: 2px solid #808080;
+}
+
+.performance-chart__fill {
+  background: #85c860;
+  width: 78%;
+  height: 100%;
+}
+
+.performance-chart__value {
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
+}
+
+.chart {
+  background: #808080;
+  padding-bottom: 10px;
+}
+
+.chart__graphic {
+  width: 100%;
+}
+
+.chart__value {
+  color: white;
+  text-align: center;
 }
