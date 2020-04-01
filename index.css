@@ -1,22 +1,54 @@
+@font-face {
+    font-family: Raleway-Black;
+    src: url(assets/fonts/Raleway-Black.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(assets/fonts/Raleway-Bold.ttf);
+}
+
+:root {
+    --box-shadow: rgba(0,0,0,0.25) 0 0 8px;
+    --font-size-small: 25px;
+    --font-size-medium: 38px;
+    --font-size-large: 48px;
+}
+
 body {
+    font-family: 'Arial', Arial, sans-serif;
+    font-weight: bold;
     margin: 0;
     height: 100vh;
     display: grid;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-areas:
             "header"
             "content";
+    font-size:  var(--font-size-small);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:active {
+    text-decoration: underline;
 }
 
 .header {
     overflow: hidden;
-    padding: 20px 10px;
+    padding: 10px 30px;
     background-color: #d9d9d9;
     grid-area: header;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    background-color: #009fe3;
 }
 
 .navigation {
@@ -40,6 +72,6 @@ body {
 }
 
 .section-right {
-    background-color: #d9dad9;
+    background-color: #d9d9d9;
     grid-area: section-right;
 }
