@@ -7,13 +7,14 @@ input {
 
 label {
   font-size: var(--font-size-medium);
+  padding-right: 20px;
 }
 
 button {
   border: solid 3px #009fe3;
   background-color: #fff;
   color: #009fe3;
-  margin: 5px;
+  margin: 5px 0 5px 5px;
   height: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -22,6 +23,11 @@ button {
 button:hover {
   background-color: #009fe3;
   color: #fff;
+}
+
+ul {
+  padding: 0;
+  min-width: 375px;
 }
 
 .company__heading {
@@ -35,9 +41,10 @@ button:hover {
 }
 
 .company__form li {
+  min-width: 375px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
 }
 .company__form > ul > li > label {
@@ -49,14 +56,21 @@ button:hover {
   flex: 1 0 220px;
 }
 
-.company__months:hover {
+.company__form > ul > li > .company__months:hover {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.company__buttons {
+.company__form ul li.company__buttons {
+  display: flex;
   justify-content: flex-end;
 }
 
 .faded {
   opacity: 30%;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 5px;
 }

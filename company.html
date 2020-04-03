@@ -47,6 +47,71 @@
          <form class="company__form">
            <ul>
              <li>
+               <label for="umsatz">Umsatz:</label>
+               <input type="number" name="umsatz" id="umsatz" maxlength="12" placeholder="in CHF"/>
+             </li>
+             <li>
+               <label for="ausgaben">Ausgaben:</label>
+               <input
+                       type="number"
+                       name="ausgaben"
+                       id="ausgaben"
+                       maxlength="12"
+                       placeholder="in CHF"
+               />
+             </li>
+             <li>
+               <label for="werbeausgaben">Werbeausgaben:</label>
+               <input type="number" name="werbeausgaben" id="werbeausgaben" maxlength="12" placeholder="in CHF"/>
+             </li>
+             <li class="company__buttons">
+               <button type="reset">Zurücksetzen</button>
+               <button type="submit">Speichern</button>
+             </li>
+           </ul>
+         </form>
+       </div>
+       <div class="tile">
+         <p class="company__heading">Firmendaten</p>
+         <form class="company__form">
+           <ul>
+             <li>
+               <label for="name">Firmenname:</label>
+               <input
+                       type="text"
+                       name="name"
+                       id="name"
+                       maxlength="53"
+               />
+             </li>
+             <li>
+               <label for="adresse">Adresse:</label>
+               <input
+                       type="text"
+                       name="adresse"
+                       id="adresse"
+                       maxlength="53"
+               />
+             </li>
+             <li>
+               <label for="plz">PLZ:</label>
+               <input
+                       type="number"
+                       name="plz"
+                       id="plz"
+                       maxlength="4"
+               />
+             </li>
+             <li>
+               <label for="ort">Ort:</label>
+               <input
+                       type="text"
+                       name="ort"
+                       id="ort"
+                       maxlength="53"
+               />
+             </li>
+             <li>
                <label for="mitarbeiter">Mitarbeiter:</label>
                <input
                        type="number"
@@ -54,23 +119,6 @@
                        id="mitarbeiter"
                        maxlength="6"
                />
-             </li>
-             <li>
-               <label for="umsatz">Umsatz: <i class="faded">in CHF</i></label>
-               <input type="number" name="umsatz" id="umsatz" maxlength="12" />
-             </li>
-             <li>
-               <label for="ausgaben">Ausgaben: <i class="faded">in CHF</i></label>
-               <input
-                       type="number"
-                       name="ausgaben"
-                       id="ausgaben"
-                       maxlength="12"
-               />
-             </li>
-             <li>
-               <label for="ertrag">Ertrag: <i class="faded">in CHF</i></label>
-               <input type="number" name="ertrag" id="ertrag" maxlength="12" />
              </li>
              <li class="company__buttons">
                <button type="reset">Zurücksetzen</button>
