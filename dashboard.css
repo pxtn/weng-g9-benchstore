@@ -50,6 +50,11 @@
   border-color: #808080;
 }
 
+.tile--dark {
+  background: #547899;
+  color: white;
+}
+
 .tile__title {
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -59,7 +64,7 @@
 .performance-chart {
   position: relative;
   height: 35px;
-  border: 2px solid #808080;
+  border: 3px solid #808080;
 }
 
 .performance-chart__fill {
@@ -89,4 +94,20 @@
 .chart__value {
   color: white;
   text-align: center;
+}
+
+.legend {
+  font-size: 14px;
+}
+
+.stats {
+  font-weight: bold;
+}
+
+.stats--own {
+  color: #30cef2;
+}
+
+.stats--foreign {
+  color: #ddab37;
 }
