@@ -18,7 +18,12 @@ input {
   width: 200px;
   height: 20px;
   outline: 0;
-  border: solid 1px black;
+  border: solid 1px #888;
+  border-radius: 2px;
+}
+
+input:focus {
+  border-color: #333;
 }
 
 label {
@@ -47,4 +52,5 @@ button:hover {
 
 a {
   color: #000;
+  text-decoration: none;
 }
