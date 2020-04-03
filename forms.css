@@ -20,12 +20,6 @@
   padding: 5px 10px;
 }
 
-.form > ul > li > .months:hover {
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .form ul li.buttons {
   display: flex;
   justify-content: flex-end;

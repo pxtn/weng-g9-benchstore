@@ -43,6 +43,7 @@ button {
   height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 button:hover {
@@ -53,4 +54,5 @@ button:hover {
 a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
