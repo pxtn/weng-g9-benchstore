@@ -56,6 +56,10 @@
   padding: 15px;
 }
 
+.user--active {
+  background: #eee;
+}
+
 .user__name {
   white-space: nowrap;
 }

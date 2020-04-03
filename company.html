@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="stylesheet" type="text/css" href="company.css" />
     <link rel="stylesheet" type="text/css" href="header.css" />
+    <link rel="stylesheet" type="text/css" href="forms.css" />
     <link rel="stylesheet" type="text/css" href="dashboard.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
@@ -24,56 +25,29 @@
         <div class="navigation">
           <a href="index.html" class="navigation__link">Übersicht</a>
           <a
-            href="company.html"
-            class="navigation__link navigation__link--active"
-            >Meine Firma</a
+            href="figures.html"
+            class="navigation__link navigation__link"
+            >Kennzahlen</a
           >
         </div>
-        <div class="user">
-          <svg class="profile-picture">
-            <use xlink:href="assets/img/profile.svg#profile"></use>
-          </svg>
-          <div>
-            <div class="user__name">Hans Muster</div>
-            <a class="logout" href="#">❯ Abmelden</a>
+        <a href="company.html">
+          <div class="user user--active">
+              <svg class="profile-picture">
+                <use xlink:href="assets/img/profile.svg#profile"></use>
+              </svg>
+              <div>
+                <div class="user__name">Hans Muster</div>
+                <a class="logout" href="#">❯ Abmelden</a>
+              </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div class="content">
      <div class="main">
        <div class="tile">
-         <p class="company__heading">Daten für den April 2020</p>
-         <form class="company__form">
-           <ul>
-             <li>
-               <label for="umsatz">Umsatz:</label>
-               <input type="number" name="umsatz" id="umsatz" maxlength="12" placeholder="in CHF"/>
-             </li>
-             <li>
-               <label for="ausgaben">Ausgaben:</label>
-               <input
-                       type="number"
-                       name="ausgaben"
-                       id="ausgaben"
-                       maxlength="12"
-                       placeholder="in CHF"
-               />
-             </li>
-             <li>
-               <label for="werbeausgaben">Werbeausgaben:</label>
-               <input type="number" name="werbeausgaben" id="werbeausgaben" maxlength="12" placeholder="in CHF"/>
-             </li>
-             <li class="company__buttons">
-               <button type="reset">Zurücksetzen</button>
-               <button type="submit">Speichern</button>
-             </li>
-           </ul>
-         </form>
-       </div>
-       <div class="tile">
          <p class="company__heading">Firmendaten</p>
-         <form class="company__form">
+         <form class="form">
            <ul>
              <li>
                <label for="name">Firmenname:</label>
@@ -136,7 +110,7 @@
                        value="65"
                />
              </li>
-             <li class="company__buttons">
+             <li class="buttons">
                <button type="reset">Zurücksetzen</button>
                <button type="submit">Speichern</button>
              </li>
@@ -146,10 +120,10 @@
       </div>
       <div class="side-right">
         <div class="tile">
-          <p class="company__heading">Vorherige Monate</p>
-          <p class="company__months">> März 2020</p>
-          <p class="company__months">> Februar 2020</p>
-          <p class="company__months">> Januar 2020</p>
+          <p class="company__heading">Weitere Informationen</p>
+          <p><a>❯ Über uns</a></p>
+          <p><a>❯ AGB</a></p>
+          <p><a>❯ Impressum</a></p>
         </div>
       </div>
     </div>

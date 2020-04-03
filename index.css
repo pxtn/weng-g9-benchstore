@@ -9,3 +9,35 @@ body {
   background: #f6f6f6;
   color: #333;
 }
+
+input {
+  width: 200px;
+  height: 20px;
+  outline: 0;
+  border: solid 1px black;
+}
+
+label {
+  font-size: var(--font-size-medium);
+  padding-right: 20px;
+}
+
+ul {
+  padding: 0;
+  min-width: 375px;
+}
+
+button {
+  border: solid 3px #009fe3;
+  background-color: #fff;
+  color: #009fe3;
+  margin: 5px 0 5px 5px;
+  height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #009fe3;
+  color: #fff;
+}
