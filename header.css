@@ -54,6 +54,7 @@
   justify-self: flex-end;
   width: 150px;
   padding: 15px;
+  color: #000;
 }
 
 .user--active {
