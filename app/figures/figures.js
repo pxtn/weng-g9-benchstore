@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="stylesheet" type="text/css" href="figures.css" />
-    <link rel="stylesheet" type="text/css" href="header.css" />
-    <link rel="stylesheet" type="text/css" href="forms.css" />
-    <link rel="stylesheet" type="text/css" href="dashboard.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <title>Kennzahlen | BenchStore</title>
-    <base href="https://pxtn.github.io/weng-g9-benchstore/" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="header__content">
-        <div class="logo-container">
-          <a href="index.html">
-            <img class="logo" src="assets/img/BenchStore-Logo.svg" />
-          </a>
-        </div>
-        <div class="navigation">
-          <a href="index.html" class="navigation__link">Übersicht</a>
-          <a
-            href="figures.html"
-            class="navigation__link navigation__link--active"
-            >Unternehmensdaten</a
-          >
-        </div>
-        <a href="company.html">
-          <div class="user">
-            <svg class="profile-picture">
-              <use xlink:href="assets/img/profile.svg#profile"></use>
-            </svg>
-            <div>
-              <div class="user__name">Hans Muster</div>
-              <a class="logout" href="#">❯ Abmelden</a>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
+var figuresComponent = Vue.component("figures", {
+  template: `
     <div class="content">
       <div class="main">
         <div class="tile">
@@ -96,5 +53,5 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+  `,
+});

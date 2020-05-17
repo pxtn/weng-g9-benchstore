@@ -44,7 +44,7 @@
   background: #ddd;
 }
 
-.navigation__link--active {
+.navigation__link.router-link-active {
   background: #eee;
 }
 

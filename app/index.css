@@ -56,3 +56,8 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.scroll-container {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
