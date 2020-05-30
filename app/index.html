@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="stylesheet" type="text/css" href="forms.css" />
     <link rel="stylesheet" type="text/css" href="header/header.css" />
+    <link rel="stylesheet" type="text/css" href="dashboard/rating/rating.css" />
     <link rel="stylesheet" type="text/css" href="dashboard/dashboard.css" />
     <link rel="stylesheet" type="text/css" href="figures/figures.css" />
     <link rel="stylesheet" type="text/css" href="company/company.css" />
@@ -21,10 +22,13 @@
     <div id="app">
       <bs-header></bs-header>
       <div class="scroll-container">
-        <router-view></router-view>
+        <transition name="slide" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
     <script src="header/header.js"></script>
+    <script src="dashboard/rating/rating.js"></script>
     <script src="dashboard/dashboard.js"></script>
     <script src="figures/figures.js"></script>
     <script src="company/company.js"></script>

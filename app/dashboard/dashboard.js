@@ -3,18 +3,14 @@ var dashboardComponent = Vue.component("dashboard", {
     return {
       selectedChart: 0,
       charts: [
-        { title: "Umsatz", value: "CHF 39'230", result: "mediocre" },
-        { title: "Werbeausgaben", value: "CHF 250", result: "bad" },
-        {
-          title: "Umsatz pro Mitarbeiter",
-          value: "CHF 9'870.50",
-          result: "mediocre",
-        },
-        { title: "Produkte-Abschreibung", value: "CHF 370", result: "good" },
-        { title: "Anlagedeckungsgrad 1", value: "40,2%", result: "good" },
-        { title: "Anlagedeckungsgrad 2", value: "102,46%", result: "good" },
-        { title: "Fremdfinanzierungsgrad", value: "83,38%", result: "bad" },
-        { title: "Gesamtkapitalrendite", value: "8,76%", result: "mediocre" },
+        { title: "Umsatz", value: "CHF 39'230", rating: 62 },
+        { title: "Werbeausgaben", value: "CHF 250", rating: 15 },
+        { title: "Umsatz pro Mitarbeiter", value: "CHF 9'870.50", rating: 75 },
+        { title: "Produkte-Abschreibung", value: "CHF 370", rating: 90 },
+        { title: "Anlagedeckungsgrad 1", value: "40,2%", rating: 95 },
+        { title: "Anlagedeckungsgrad 2", value: "102,46%", rating: 85 },
+        { title: "Fremdfinanzierungsgrad", value: "83,38%", rating: 10 },
+        { title: "Gesamtkapitalrendite", value: "8,76%", rating: 55 },
       ],
     };
   },
@@ -40,18 +36,14 @@ var dashboardComponent = Vue.component("dashboard", {
           v-on:click="selectChart(index)"
         >
           <div class="tile__title">{{chart.title}}</div>
-          <div class="chart">
-            <img
-              class="chart__graphic"
-              v-bind:src="'../assets/img/chart_' + chart.result + '.png'"
-            />
-            <div class="chart__value">{{chart.value}}</div>
-          </div>
+          <rating v-bind:value="chart.rating" v-bind:text="chart.value"></rating>
         </div>
       </div>
       <div class="side-right">
         <div class="tile tile--dark">
-          <div class="tile__title">{{charts[selectedChart].title}}</div>
+          <transition name="fade">
+            <div class="tile__title">{{charts[selectedChart].title}}</div>
+          </transition>
           <p>
             Der durchschnittliche Umsatz ähnlicher Geschäfte* betrug diesen
             Monat <span class="stats stats--foreign">CHF 70'000</span> während

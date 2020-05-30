@@ -12,6 +12,7 @@ body {
 
 * {
   line-height: 1.35em;
+  transition: all 0.3s ease;
 }
 
 input {
@@ -60,4 +61,19 @@ a {
 .scroll-container {
   max-height: calc(100vh - 80px);
   overflow-y: auto;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slide-leave-active {
+  opacity: 0;
+  transform: translateX(30px);
 }
