@@ -1,3 +1,5 @@
+const apiBaseUrl = "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io";
+
 const router = new VueRouter({
   routes: [
     {

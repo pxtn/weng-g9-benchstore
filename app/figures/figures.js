@@ -21,16 +21,9 @@ var figuresComponent = Vue.component("figures", {
     },
     submit: async function () {
       try {
-        // await axios.post(
-        //   "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/figures",
-        //   this.modifiedFigures
-        // );
-        // this.figures = { ...this.modifiedFigures };
-        // this.$refs.snackbar.info("Daten wurden erfolgreich gespeichert.");
-        setTimeout(() => {
-          this.figures = { ...this.modifiedFigures };
-          this.$refs.snackbar.info("Daten wurden erfolgreich gespeichert.");
-        }, 500);
+        await axios.post(`${apiBaseUrl}/figures`, this.modifiedFigures);
+        this.figures = { ...this.modifiedFigures };
+        this.$refs.snackbar.info("Daten wurden erfolgreich gespeichert.");
       } catch (e) {
         this.$refs.snackbar.error(
           "Beim Speichern der Daten ist ein Fehler aufgetreten."
@@ -50,27 +43,11 @@ var figuresComponent = Vue.component("figures", {
   },
   mounted: async function () {
     try {
-      // const response = await axios.get(
-      //   "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/figures"
-      // );
-      // this.figures = { ...response.data };
-      // this.modifiedFigures = { ...response.data };
-      // this.loading = false;
-      // this.error = false;
-      setTimeout(() => {
-        this.figures = {
-          revenue: 39230,
-          expenses: 20410,
-          advertisingExpenses: 250,
-        };
-        this.modifiedFigures = {
-          revenue: 39230,
-          expenses: 20410,
-          advertisingExpenses: 250,
-        };
-        this.loading = false;
-        this.error = false;
-      }, 1000);
+      const response = await axios.get(`${apiBaseUrl}/figures`);
+      this.figures = { ...response.data };
+      this.modifiedFigures = { ...response.data };
+      this.loading = false;
+      this.error = false;
     } catch (e) {
       this.loading = false;
       this.error = true;

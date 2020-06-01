@@ -17,30 +17,10 @@ var dashboardComponent = Vue.component("dashboard", {
   },
   mounted: async function () {
     try {
-      // const response = await axios.get(
-      //   "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/benchmark"
-      // );
-      // this.charts = response.data.charts;
-      // this.loading = false;
-      // this.error = false;
-      setTimeout(() => {
-        this.charts = [
-          { title: "Umsatz", value: "CHF 39'230", rating: 62 },
-          { title: "Werbeausgaben", value: "CHF 250", rating: 15 },
-          {
-            title: "Umsatz pro Mitarbeiter",
-            value: "CHF 9'870.50",
-            rating: 75,
-          },
-          { title: "Produkte-Abschreibung", value: "CHF 370", rating: 90 },
-          { title: "Anlagedeckungsgrad 1", value: "40,2%", rating: 95 },
-          { title: "Anlagedeckungsgrad 2", value: "102,46%", rating: 85 },
-          { title: "Fremdfinanzierungsgrad", value: "83,38%", rating: 10 },
-          { title: "Gesamtkapitalrendite", value: "8,76%", rating: 55 },
-        ];
-        this.loading = false;
-        this.error = false;
-      }, 1000);
+      const response = await axios.get(`${apiBaseUrl}/benchmark`);
+      this.charts = response.data.charts;
+      this.loading = false;
+      this.error = false;
     } catch (e) {
       this.loading = false;
       this.error = true;

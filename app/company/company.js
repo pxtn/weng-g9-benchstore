@@ -27,16 +27,9 @@ var companyComponent = Vue.component("company", {
     },
     submit: async function () {
       try {
-        await axios.post(
-          "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/companyData",
-          this.modifiedCompanyData
-        );
+        await axios.post(`${apiBaseUrl}/companyData`, this.modifiedCompanyData);
         this.companyData = { ...this.modifiedCompanyData };
         this.$refs.snackbar.info("Daten wurden erfolgreich gespeichert.");
-        // setTimeout(() => {
-        //   this.companyData = { ...this.modifiedCompanyData };
-        //   this.$refs.snackbar.info("Daten wurden erfolgreich gespeichert.");
-        // }, 500);
       } catch (e) {
         this.$refs.snackbar.error(
           "Beim Speichern der Daten ist ein Fehler aufgetreten."
@@ -58,26 +51,11 @@ var companyComponent = Vue.component("company", {
   },
   mounted: async function () {
     try {
-      const response = await axios.get(
-        "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/companyData"
-      );
+      const response = await axios.get(`${apiBaseUrl}/companyData`);
       this.companyData = { ...response.data };
       this.modifiedCompanyData = { ...response.data };
       this.loading = false;
       this.error = false;
-      // setTimeout(() => {
-      //   this.companyData = {
-      //     name: "Tante Emmas Spezialitäten",
-      //     address: "Pionierstrasse 1",
-      //     zipCode: 8400,
-      //     city: "Winterthur",
-      //     employees: 3,
-      //     storeArea: 65,
-      //   };
-      //   this.modifiedCompanyData = { ...this.companyData };
-      //   this.loading = false;
-      //   this.error = false;
-      // }, 1000);
     } catch (e) {
       this.loading = false;
       this.error = true;
