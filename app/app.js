@@ -24,6 +24,8 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+Vue.component("snackbar", VueSnackbar);
+
 var app = new Vue({
   el: "#app",
   router,

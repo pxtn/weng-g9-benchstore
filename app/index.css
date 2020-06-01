@@ -44,12 +44,17 @@ button {
   height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+button:hover:not(:disabled) {
+  background-color: #009fe3;
+  color: #fff;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #009fe3;
-  color: #fff;
+button:disabled {
+  border-color: #c1c1c1;
+  color: #c1c1c1;
 }
 
 a {
