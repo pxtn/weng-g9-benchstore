@@ -18,7 +18,7 @@ Vue.component("rating", {
     this.$nextTick(function () {
       setTimeout(() => {
         this.initial = false;
-      }, 0);
+      }, 300);
     });
   },
   template: `

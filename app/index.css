@@ -77,3 +77,28 @@ a {
   opacity: 0;
   transform: translateX(30px);
 }
+
+.fadezoom-enter-active,
+.fadezoom-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.fadezoom-enter,
+.fadezoom-leave-active {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+.loading-indicator {
+  display: block;
+  margin: 80px auto;
+}
+
+.error {
+  background: #d24343;
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 4px;
+  text-align: center;
+}
