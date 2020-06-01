@@ -53,8 +53,8 @@ var figuresComponent = Vue.component("figures", {
       // const response = await axios.get(
       //   "https://a0166695-8f4b-4a4b-817d-77769f7173de.mock.pstmn.io/figures"
       // );
-      // this.figures = response.data;
-      // this.modifiedFigures = response.data;
+      // this.figures = { ...response.data };
+      // this.modifiedFigures = { ...response.data };
       // this.loading = false;
       // this.error = false;
       setTimeout(() => {
