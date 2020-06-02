@@ -6,7 +6,7 @@ Vue.component("bs-header", {
           <router-link to="/dashboard">
             <img
               class="logo"
-              src="../assets/img/BenchStore-Logo.svg"
+              src="assets/img/BenchStore-Logo.svg"
             />
           </router-link>
         </div>
@@ -26,7 +26,7 @@ Vue.component("bs-header", {
             <div class="user">
               <img
                 class="profile-picture"
-                src="../assets/img/profile.svg"
+                src="assets/img/profile.svg"
               />
               <div>
                 <div class="user__name">Hans Muster</div>

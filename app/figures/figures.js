@@ -55,7 +55,7 @@ var figuresComponent = Vue.component("figures", {
   },
   template: `
     <div>
-      <img v-if="loading" class="loading-indicator" src="../assets/img/loading.svg" />
+      <img v-if="loading" class="loading-indicator" src="assets/img/loading.svg" />
       <div v-else>
         <div v-if="error" class="error">Beim Laden der Daten ist ein Fehler aufgetreten.</div>
         <div v-else class="content">
