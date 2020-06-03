@@ -54,22 +54,30 @@ var dashboardComponent = Vue.component("dashboard", {
             <transition name="fadezoom" mode="out-in">
               <div v-if="charts[selectedChart]" class="tile tile--dark">
                 <div class="tile__title">{{charts[selectedChart].title}}</div>
-                <p>
-                  Der durchschnittliche Umsatz ähnlicher Geschäfte* betrug diesen
-                  Monat <span class="stats stats--foreign">CHF 70'000</span> während
-                  ihr Umsatz
-                  <span class="stats stats--own">CHF 39'230</span> betrug.
-                </p>
-                <p>
-                  Sie haben <span class="stats stats--own">4</span> Angestellte
-                  während ähnliche Geschäfte*
-                  <span class="stats stats--foreign">2</span> Angestellte
-                  beschäftigen.
-                </p>
-                <p class="legend">
-                  *heruntergerechnet auf gleiche Ladengrösse, Mitarbeiterzahl und
-                  Werbeausgaben
-                </p>
+                <div v-if="charts[selectedChart].title === 'Umsatz'">
+                  <p>
+                    Der durchschnittliche Umsatz ähnlicher Geschäfte* betrug diesen
+                    Monat <span class="stats stats--foreign">CHF 70'000</span> während
+                    ihr Umsatz
+                    <span class="stats stats--own">CHF 39'230</span> betrug.
+                  </p>
+                  <p>
+                    Sie haben <span class="stats stats--own">4</span> Angestellte
+                    während ähnliche Geschäfte*
+                    <span class="stats stats--foreign">2</span> Angestellte
+                    beschäftigen.
+                  </p>
+                  <p class="legend">
+                    *heruntergerechnet auf gleiche Ladengrösse, Mitarbeiterzahl und
+                    Werbeausgaben
+                  </p>
+                </div>
+                <div v-else>
+                  <p>
+                    Hier werden Informationen von anderen Geschäften zum Vergleich
+                    dargestellt, sobald sie verfügbar sind.
+                  </p>
+                </div>
               </div>
             </transition>
           </div>
