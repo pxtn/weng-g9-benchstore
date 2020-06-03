@@ -1,4 +1,9 @@
 Vue.component("bs-header", {
+  data: function () {
+    return {
+      username: "Hans Muster",
+    };
+  },
   template: `
     <div class="header">
       <div class="header__content">
@@ -29,7 +34,7 @@ Vue.component("bs-header", {
                 src="assets/img/profile.svg"
               />
               <div>
-                <div class="user__name">Hans Muster</div>
+                <div class="user__name">{{username}}</div>
                 <a class="logout" href="#">❯ Abmelden</a>
               </div>
             </div>

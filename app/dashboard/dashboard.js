@@ -3,6 +3,15 @@ var dashboardComponent = Vue.component("dashboard", {
     return {
       selectedChart: null,
       charts: [],
+      totalPerformance: 7.8,
+      revenue: {
+        own: "CHF 39'230",
+        foreign: "CHF 70'000",
+      },
+      employees: {
+        own: 4,
+        foreign: 2,
+      },
       loading: true,
       error: false,
     };
@@ -37,7 +46,7 @@ var dashboardComponent = Vue.component("dashboard", {
               <div class="tile__title">Gesamt-Performance</div>
               <div class="performance-chart">
                 <div class="performance-chart__fill"></div>
-                <div class="performance-chart__value">7.8 / 10</div>
+                <div class="performance-chart__value">{{totalPerformance}} / 10</div>
               </div>
             </div>
             <div
@@ -57,14 +66,14 @@ var dashboardComponent = Vue.component("dashboard", {
                 <div v-if="charts[selectedChart].title === 'Umsatz'">
                   <p>
                     Der durchschnittliche Umsatz ähnlicher Geschäfte* betrug diesen
-                    Monat <span class="stats stats--foreign">CHF 70'000</span> während
+                    Monat <span class="stats stats--foreign">{{revenue.foreign}}</span> während
                     ihr Umsatz
-                    <span class="stats stats--own">CHF 39'230</span> betrug.
+                    <span class="stats stats--own">{{revenue.own}}</span> betrug.
                   </p>
                   <p>
-                    Sie haben <span class="stats stats--own">4</span> Angestellte
+                    Sie haben <span class="stats stats--own">{{employees.own}}</span> Angestellte
                     während ähnliche Geschäfte*
-                    <span class="stats stats--foreign">2</span> Angestellte
+                    <span class="stats stats--foreign">{{employees.foreign}}</span> Angestellte
                     beschäftigen.
                   </p>
                   <p class="legend">

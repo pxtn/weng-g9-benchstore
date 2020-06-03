@@ -29,26 +29,6 @@
   width: 100%;
 }
 
-.rating__visual__part--red {
-  background-color: #f0593e;
-}
-
-.rating__visual__part--orange {
-  background-color: #f89d48;
-}
-
-.rating__visual__part--yellow {
-  background-color: #fff46d;
-}
-
-.rating__visual__part--lightgreen {
-  background-color: #87c765;
-}
-
-.rating__visual__part--green {
-  background-color: #71bf44;
-}
-
 .rating__text {
   color: white;
   height: 35px;

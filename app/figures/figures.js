@@ -30,6 +30,12 @@ var figuresComponent = Vue.component("figures", {
         );
       }
     },
+    localizedMonth: function (subtractMonths = 0) {
+      return moment()
+        .locale("de")
+        .subtract(subtractMonths, "months")
+        .format("MMMM YYYY");
+    },
   },
   computed: {
     isModified: function () {
@@ -61,7 +67,7 @@ var figuresComponent = Vue.component("figures", {
         <div v-else class="content">
           <div class="main">
             <div class="tile">
-              <p class="figures__heading">Daten für den April 2020</p>
+              <p class="figures__heading">Daten für den {{localizedMonth()}}</p>
               <div class="form">
                 <ul>
                   <li>
@@ -108,9 +114,7 @@ var figuresComponent = Vue.component("figures", {
           <div class="side-right">
             <div class="tile">
               <p class="figures__heading">Vorherige Monate</p>
-              <p><a>❯ März 2020</a></p>
-              <p><a>❯ Februar 2020</a></p>
-              <p><a>❯ Januar 2020</a></p>
+              <p v-for="month in 4"><a>❯ {{localizedMonth(month)}}</a></p>
             </div>
           </div>
         </div>
